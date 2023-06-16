@@ -1,0 +1,165 @@
+@import "src/variables";
+.extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 375px;
+  margin: 0 auto;
+  .trd {
+    margin-bottom: 120px;
+  }
+}
+.au {
+  .text {
+    margin-top: -6px;
+    padding: 80px 24px;
+    color: $white;
+    background-color: $peach;
+    background-image: url("/assets/about/mobile/bgPatternHeroAboutMobile.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 26.25%;
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 36px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+  }
+}
+.wct,
+.trd {
+  .text {
+    background-color: $veryLightPeach;
+    background-image: url("/assets/shared/desktop/bgPatternThreeCircles.svg");
+    background-repeat: no-repeat;
+    padding: 80px 24px;
+    margin-top: -6px;
+    h2 {
+      color: $peach;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 36px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    p {
+      color: $darkGrey;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.1px;
+      text-align: center;
+      &:first-of-type {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .extra {
+    border-radius: 20px;
+    margin: 0 auto;
+    width: auto;
+    overflow: hidden;
+    width: 689px;
+    &.trd {
+      margin-bottom: 120px;
+    }
+  }
+  .au {
+    margin-bottom: 120px;
+    .text {
+      margin-top: 0;
+      padding: 64px 58px;
+      background-image: url("/assets/about/desktop/bgPatternHeroAboutDesktop.svg");
+      background-position: -235% 132.5%;
+      h2 {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 32px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+  .wct,
+  .trd {
+    .text {
+      background-position: 90% 120%;
+      padding: 68px 59px;
+      margin-top: 0;
+      h2 {
+        font-size: 40px;
+        line-height: 48px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        &:first-of-type {
+          margin-bottom: 26px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .extra {
+    display: flex;
+    flex-direction: row-reverse;
+    width: calc(100% - 330px);
+    &.wct {
+      flex-direction: row;
+    }
+    .trd {
+      margin-bottom: 120px;
+    }
+  }
+  .au {
+    margin-bottom: 160px;
+    .text {
+      min-height: 480px;
+      padding: 135px 82px 135px 95px;
+      background-image: url("/assets/about/desktop/bgPatternHeroAboutDesktop.svg");
+      background-position: 60% 100%;
+      h2 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+    }
+  }
+  .wct,
+  .trd {
+    .text {
+      min-height: 640px;
+      padding: 154px 95px;
+      background-position: -250% 100%;
+      h2 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+    }
+  }
+  .trd {
+    .text {
+      background-position: 0% 100%;
+    }
+  }
+}

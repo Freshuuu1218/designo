@@ -1,0 +1,30 @@
+<header>
+  <a routerLink="/"
+    ><img src="/assets/shared/desktop/logoDark.png" alt="logo" class="logo"
+  /></a>
+  <img
+    *ngIf="screen < 768 && display === false"
+    src="/assets/shared/mobile/iconHamburger.svg"
+    alt="iconHamburger"
+    (click)="displayMenu()"
+  />
+  <img
+    *ngIf="screen < 768 && display"
+    src="/assets/shared/mobile/iconClose.svg"
+    alt="iconHamburger"
+    (click)="displayMenu()"
+  />
+  <ul class="menu" *ngIf="screen >= 768">
+    <li><a routerLink="/about">our company</a></li>
+    <li><a routerLink="/locations">locations</a></li>
+    <li><a routerLink="/contact">contact</a></li>
+  </ul>
+  <div class="mobileMenu" *ngIf="display && screen < 768">
+    <ul>
+      <li (click)="hideMenu()"><a routerLink="/about">our company</a></li>
+      <li (click)="hideMenu()"><a routerLink="/locations">locations</a></li>
+      <li (click)="hideMenu()"><a routerLink="/contact">contact</a></li>
+    </ul>
+    <span class="background"></span>
+  </div>
+</header>

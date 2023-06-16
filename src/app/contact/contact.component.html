@@ -1,0 +1,93 @@
+<app-header></app-header>
+<div class="contactForm">
+  <div class="text">
+    <h1>Contact Us</h1>
+    <p>
+      Ready to take it to the next level? Let’s talk about your project or idea
+      and find out how we can help your business grow. If you are looking for
+      unique digital experiences that’s relatable to your users, drop us a line.
+    </p>
+  </div>
+  <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    <div class="input">
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Name"
+        required
+        ngModel
+        #fname="ngModel"
+      />
+      <span class="error" *ngIf="showNameError">
+        Can't be empty
+        <img src="/assets/contact/desktop/iconError.svg" alt="error icon" />
+      </span>
+    </div>
+    <div class="input">
+      <input
+        type="text"
+        id="email"
+        name="email"
+        required
+        email
+        placeholder="Email Address"
+        ngModel
+        #femail="ngModel"
+      />
+      <span class="error" *ngIf="showEmailError">
+        Can't be empty
+        <img src="/assets/contact/desktop/iconError.svg" alt="error icon"
+      /></span>
+      <span class="error" *ngIf="showEmailValidError">
+        Wrong email address
+        <img src="/assets/contact/desktop/iconError.svg" alt="error icon"
+      /></span>
+    </div>
+    <div class="input">
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        required
+        placeholder="Phone"
+        ngModel
+        #fphone="ngModel"
+      />
+      <span class="error" *ngIf="showPhoneError">
+        Can't be empty
+        <img src="/assets/contact/desktop/iconError.svg" alt="error icon" />
+      </span>
+    </div>
+    <div class="input">
+      <textarea
+        name="message"
+        id="message"
+        required
+        placeholder="Your Message"
+        ngModel
+        #fmsg="ngModel"
+      ></textarea>
+      <span class="error" *ngIf="showMessageError">
+        Can't be empty
+        <img src="/assets/contact/desktop/iconError.svg" alt="error icon" />
+      </span>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<app-locations-mini></app-locations-mini>
+<!-- <div class="locations">
+  <div class="location" *ngFor="let location of locations">
+    <div class="backgroundPattern">
+      <img src="{{ location.img }}" alt="{{ location.name }}" />
+    </div>
+
+    <div class="text">
+      <h2>{{ location.name }}</h2>
+      <button>See location</button>
+    </div>
+  </div>
+</div> -->
+<app-footer></app-footer>

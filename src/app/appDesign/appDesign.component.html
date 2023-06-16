@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="intro">
+  <h1>App Design</h1>
+  <p>
+    Our mobile designs bring intuitive digital solutions to your customers right
+    at their fingertips.
+  </p>
+</div>
+<div class="designs">
+  <div class="design" *ngFor="let design of designs">
+    <img src="{{ design.img }}" alt="{{ design.name }}" />
+    <div class="text">
+      <h2>{{ design.name }}</h2>
+      <p>{{ design.description }}</p>
+    </div>
+  </div>
+</div>
+<div class="otherDesigns">
+  <div class="other" routerLink="/web-design">
+    <span></span>
+    <h2>web design</h2>
+    <h3>view projects <fa-icon [icon]="arrow"></fa-icon></h3>
+  </div>
+  <div class="other" routerLink="/graphic-design">
+    <span></span>
+    <h2>graphic design</h2>
+    <h3>view projects <fa-icon [icon]="arrow"></fa-icon></h3>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,48 @@
+<footer>
+  <div class="letsTalk" *ngIf="url != '/contact'">
+    <div class="text">
+      <h2>Let's talk about your project</h2>
+      <p>
+        Ready to take it to the next level? Contact us today and find out how
+        our expertise can help your business grow.
+      </p>
+    </div>
+
+    <a routerLink="/contact"><button>get in touch</button></a>
+  </div>
+  <div class="footer" [ngClass]="{ locations: url === '/contact' }">
+    <div class="footerTop">
+      <a routerLink="/"
+        ><img src="/assets/shared/desktop/logoLight.png" alt="logo"
+      /></a>
+      <span class="spacer" *ngIf="screen < 768"></span>
+      <ul class="footerNav">
+        <li><a routerLink="/about">our company</a></li>
+        <li><a routerLink="/locations">locations</a></li>
+        <li><a routerLink="/contact">contact</a></li>
+      </ul>
+    </div>
+    <span class="spacer" *ngIf="screen >= 768"></span>
+
+    <div class="footerBottom">
+      <div class="address">
+        <h3>Designo Central Office</h3>
+        <p>3886 Wellington Street<br />Toronto, Ontario M9C 3J5</p>
+      </div>
+      <div class="contact">
+        <h3>Contact Us (Central Office)</h3>
+        <p>
+          P : +1 253-863-8967 <br />
+          M : contact@designo.co
+        </p>
+      </div>
+      <div class="social">
+        <fa-icon [icon]="facebook"></fa-icon>
+        <fa-icon [icon]="youtube"></fa-icon>
+        <fa-icon [icon]="twitter"></fa-icon>
+        <fa-icon [icon]="pinterest"></fa-icon>
+        <fa-icon [icon]="instagram"></fa-icon>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="locations">
+  <div class="location" *ngFor="let location of locations">
+    <img
+      *ngIf="screen < 768 || screen >= 1440"
+      src="{{ location.imgDesktop }}"
+      alt="{{ location.country }}"
+    />
+    <img
+      *ngIf="screen >= 768 && screen < 1440"
+      src="{{ location.imgTablet }}"
+      alt="{{ location.country }}"
+    />
+
+    <div class="details">
+      <h2>{{ location.country }}</h2>
+      <div class="address">
+        <strong>{{ location.address.name }}</strong
+        ><br />
+        <small>{{ location.address.street }}</small
+        ><br />
+        <small>{{ location.address.city }}</small>
+      </div>
+      <div class="contact">
+        <strong>Contact</strong><br />
+        <small>P: {{ location.phone }}</small
+        ><br />
+        <small>M: {{ location.mail }}</small>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

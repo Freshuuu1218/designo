@@ -1,0 +1,254 @@
+@import "src/designsPage"; // @import "src/variables";
+// .intro {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: $peach;
+//   background-image: url("/assets/web-design/desktop/bgPatternIntroWeb.svg");
+//   background-repeat: no-repeat;
+//   background-position: 100% 0%;
+//   padding: 105px 24px;
+//   color: $white;
+//   h1 {
+//     font-size: 32px;
+//     font-weight: 600;
+//     line-height: 36px;
+//     letter-spacing: 0px;
+//     text-align: center;
+//     margin-bottom: 24px;
+//   }
+//   p {
+//     font-size: 15px;
+//     font-weight: 400;
+//     line-height: 25px;
+//     letter-spacing: 0px;
+//     text-align: center;
+//   }
+// }
+
+// .designs {
+//   margin: 96px 24px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   .design {
+//     width: 100%;
+//     border-radius: 20px;
+//     overflow: hidden;
+//     img {
+//       width: 100%;
+//     }
+//     .text {
+//       padding: 32px 30px;
+//       background-color: $veryLightPeach;
+//       h2 {
+//         color: $peach;
+//         font-size: 20px;
+//         font-weight: 600;
+//         line-height: 26px;
+//         letter-spacing: 5px;
+//         text-align: center;
+//         text-transform: uppercase;
+//         margin-bottom: 16px;
+//       }
+//       p {
+//         color: $darkGrey;
+//         font-size: 16px;
+//         font-weight: 400;
+//         line-height: 26px;
+//         letter-spacing: 0px;
+//         text-align: center;
+//       }
+//     }
+//     &:not(:last-child) {
+//       margin-bottom: 40px;
+//     }
+//   }
+// }
+
+// .otherDesigns {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin: 96px 24px;
+//   .other {
+//     padding: 90px 0;
+//     position: relative;
+//     color: $white;
+//     width: 100%;
+//     border-radius: 14px;
+//     overflow: hidden;
+//     span {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       background-color: rgba($color: #000000, $alpha: 0.55);
+//       display: block;
+//       z-index: 1;
+//     }
+//     h2 {
+//       position: relative;
+//       z-index: 2;
+//       font-size: 28px;
+//       font-weight: 600;
+//       line-height: 36px;
+//       letter-spacing: 1.4px;
+//       text-align: center;
+//       margin-bottom: 12px;
+//       text-transform: uppercase;
+//     }
+//     h3 {
+//       position: relative;
+//       z-index: 2;
+//       font-size: 15px;
+//       font-weight: 500;
+//       line-height: 22px;
+//       letter-spacing: 5px;
+//       text-align: center;
+//       text-transform: uppercase;
+//       fa-icon {
+//         color: $peach;
+//         font-size: 13px;
+//       }
+//     }
+//   }
+//   .other:first-child {
+//     background-image: url("/assets/home/mobile/imageAppDesign.jpg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     margin-bottom: 24px;
+//   }
+//   .other:last-child {
+//     background-image: url("/assets/home/mobile/imageGraphicDesign.jpg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   .intro {
+//     margin: 0 40px 120px;
+//     border-radius: 20px;
+//     background-position: 20% 50%;
+//     padding: 64px 0;
+//     h1 {
+//       font-size: 48px;
+//       line-height: 48px;
+//     }
+//     p {
+//       max-width: 400px;
+
+//       font-size: 16px;
+//       line-height: 26px;
+//     }
+//   }
+
+//   .designs {
+//     margin: 120px 40px;
+//     .design {
+//       display: flex;
+//       img {
+//         width: 50%;
+//       }
+//       .text {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         padding: 0 40px;
+//       }
+//       &:not(:last-child) {
+//         margin-bottom: 40px;
+//       }
+//     }
+//   }
+
+//   .otherDesigns {
+//     margin: 120px 40px;
+//     .other {
+//       padding: 53px 0;
+//       h2 {
+//         font-size: 40px;
+//         line-height: 48px;
+//         letter-spacing: 2px;
+//         margin-bottom: 24px;
+//       }
+//     }
+//     .other:first-child {
+//       background-image: url("/assets/home/tablet/imageAppDesign.jpg");
+//     }
+//     .other:last-child {
+//       background-image: url("/assets/home/tablet/imageGraphicDesign.jpg");
+//     }
+//   }
+// }
+
+// @media (min-width: 1440px) {
+//   .intro {
+//     margin: 0 165px 160px;
+//     background-position: 98% 50%;
+//   }
+
+//   .designs {
+//     margin: 160px 165px;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     column-gap: 30px;
+//     row-gap: 32px;
+//     .design {
+//       flex-direction: column;
+//       width: 100%;
+//       border-radius: 20px;
+//       overflow: hidden;
+//       cursor: pointer;
+//       img {
+//         width: 100%;
+//       }
+//       &:hover > .text {
+//         background-color: $peach;
+//         transition: all 0.3s;
+//         h2 {
+//           color: $white;
+//         }
+//         p {
+//           color: $white;
+//         }
+//       }
+//       .text {
+//         min-height: 158px;
+//         justify-content: flex-start;
+//         padding: 32px 30px;
+//       }
+//       &:not(:last-child) {
+//         margin-bottom: 0;
+//       }
+//     }
+//   }
+
+//   .otherDesigns {
+//     display: flex;
+//     flex-direction: row;
+//     margin: 160px 165px;
+//     .other {
+//       padding: 107px 0;
+//       span {
+//         transition: all 0.3s;
+//       }
+//       &:hover > span {
+//         background-color: rgba($color: $peach, $alpha: 0.7);
+//         cursor: pointer;
+//       }
+//     }
+//     .other:first-child {
+//       background-image: url("/assets/home/desktop/imageAppDesign.jpg");
+//       margin-bottom: 0;
+//       margin-right: 30px;
+//     }
+//     .other:last-child {
+//       background-image: url("/assets/home/desktop/imageGraphicDesign.jpg");
+//     }
+//   }
+// }

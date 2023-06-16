@@ -1,0 +1,84 @@
+@import "src/variables";
+.extras {
+  margin: 120px 24px;
+  .extra {
+    @include flexCC;
+    span {
+      background-image: url("/assets/shared/desktop/bgPatternSmallCircle.svg");
+      background-repeat: no-repeat;
+    }
+    h2 {
+      margin: 48px 0 32px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+      letter-spacing: 5px;
+      text-align: center;
+      color: $darkGrey;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0px;
+      text-align: center;
+      color: $darkGrey;
+    }
+    &:nth-child(2) {
+      margin: 80px 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .extras {
+    margin: 120px 39px;
+    .extra {
+      flex-direction: row;
+      span {
+        margin-right: 48px;
+      }
+      h2 {
+        margin: 0 0 16px;
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+      &:nth-child(2) {
+        margin: 32px 0;
+      }
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .extras {
+    display: flex;
+    align-items: center;
+    margin: 160px 165px;
+    //   width: calc(100% - 48px);
+    .extra {
+      flex-direction: column;
+      align-items: center;
+      span {
+        margin: 0;
+      }
+      h2 {
+        margin: 48px 0 32px;
+        text-align: center;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0px;
+        text-align: center;
+        color: $darkGrey;
+      }
+      &:nth-child(2) {
+        margin: 0px 30px;
+      }
+    }
+  }
+}

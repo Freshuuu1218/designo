@@ -1,0 +1,12 @@
+<div class="extras">
+  <div class="extra" *ngFor="let extra of extras">
+    <span class="smallCircle"
+      ><img src="{{ extra.img }}" alt="{{ extra.name }}"
+    /></span>
+
+    <div class="extraText">
+      <h2>{{ extra.name }}</h2>
+      <p>{{ extra.text }}</p>
+    </div>
+  </div>
+</div>

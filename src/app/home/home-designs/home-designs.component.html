@@ -1,0 +1,12 @@
+<div class="designs">
+  <div
+    class="design"
+    *ngFor="let design of designs"
+    routerLink="{{ design.path }}"
+  >
+    <span></span>
+
+    <h2>{{ design.name }}</h2>
+    <h3>view projects <fa-icon [icon]="arrow"></fa-icon></h3>
+  </div>
+</div>

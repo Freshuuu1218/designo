@@ -1,0 +1,12 @@
+<div class="locations">
+  <div class="location" *ngFor="let location of locations">
+    <div class="backgroundPattern">
+      <img src="{{ location.img }}" alt="{{ location.name }}" />
+    </div>
+
+    <div class="text">
+      <h2>{{ location.name }}</h2>
+      <button>See location</button>
+    </div>
+  </div>
+</div>

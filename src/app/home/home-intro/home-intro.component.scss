@@ -1,0 +1,99 @@
+@import "src/variables";
+.intro {
+  width: 100%;
+  background-color: $peach;
+  background-image: url("/assets/home/desktop/bgPatternHeroHome.svg");
+  background-repeat: no-repeat;
+  background-position: 0% center;
+  @include flexCC;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 24px 450px;
+  h1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $white;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $white;
+    margin: 24px 0;
+  }
+  button {
+    @include whiteButton;
+    padding: 18px 25px;
+    margin-left: calc((100% - 150px) / 2);
+  }
+  img {
+    position: absolute;
+    bottom: -220px;
+    width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .intro {
+    margin: 0 40px;
+    width: calc(100% - 80px);
+    border-radius: 20px;
+    background-position: 350% center;
+    padding: 65px 58px 470px;
+    h1 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 24px 63px;
+    }
+    img {
+      bottom: -220px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .intro {
+    margin: 0 165px;
+    width: calc(100% - 330px);
+    background-position: 100% 0%;
+    position: relative;
+    padding: 0;
+
+    .text {
+      margin: 145px 475px 145px 95px;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 48px;
+      text-align: left;
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      text-align: left;
+      margin: 32px 0;
+      width: 450px;
+    }
+    button {
+      margin: 0;
+      &:hover {
+        transition: all 0.2s;
+        color: $white;
+        background-color: $lightPeach;
+        cursor: pointer;
+      }
+    }
+    img {
+      bottom: -75px;
+      right: 75px;
+    }
+  }
+}

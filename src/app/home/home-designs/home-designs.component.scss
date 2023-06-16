@@ -1,0 +1,129 @@
+@import "src/variables";
+.designs {
+  margin: 120px 24px 0;
+  width: calc(100% - 48px);
+  color: $white;
+  .design {
+    position: relative;
+    padding: 90px 0;
+    border-radius: 10px;
+    span {
+      @include shadowBackground;
+    }
+    h2,
+    h3 {
+      position: relative;
+      z-index: 2;
+    }
+    h2 {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 36px;
+      letter-spacing: 1.4px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      fa-icon {
+        color: $peach;
+        font-size: 13px;
+      }
+    }
+  }
+  .design:first-child {
+    background-image: url("/assets/home/mobile/imageWebDesign.jpg");
+    @include nrc;
+  }
+  .design:nth-child(2) {
+    margin: 24px 0;
+    background-image: url("/assets/home/mobile/imageAppDesign.jpg");
+    @include nrc;
+  }
+  .design:last-child {
+    background-image: url("/assets/home/mobile/imageGraphicDesign.jpg");
+    @include nrc;
+  }
+}
+@media (min-width: 768px) {
+  .designs {
+    margin: 120px 40px 0;
+    width: calc(100% - 80px);
+    .design {
+      padding: 53px 0;
+      h2 {
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      h3 {
+        margin-top: 24px;
+      }
+    }
+    .design:first-child {
+      background-image: url("/assets/home/tablet/imageWebDesign.jpg");
+    }
+    .design:nth-child(2) {
+      background-image: url("/assets/home/tablet/imageAppDesign.jpg");
+    }
+    .design:last-child {
+      background-image: url("/assets/home/tablet/imageGraphicDesign.jpg");
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .designs {
+    display: grid;
+    grid-template-areas:
+      "web app"
+      "web graphic";
+    column-gap: 30px;
+    row-gap: 24px;
+    margin: 120px 164px 0;
+    width: calc(100% - 328px);
+    height: 640px;
+    .design {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 90px 0;
+      border-radius: 10px;
+      span {
+        transition: all 0.3s;
+        &:hover {
+          background-color: rgba($color: $peach, $alpha: 0.7);
+          cursor: pointer;
+        }
+      }
+
+      h2 {
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    .design:first-child {
+      grid-area: web;
+      background-image: url("/assets/home/desktop/imageWebDesignLarge.jpg");
+    }
+    .design:nth-child(2) {
+      grid-area: app;
+      margin: 0;
+      background-image: url("/assets/home/desktop/imageAppDesign.jpg");
+    }
+    .design:last-child {
+      grid-area: graphic;
+      background-image: url("/assets/home/desktop/imageGraphicDesign.jpg");
+    }
+  }
+}
