@@ -10,6 +10,7 @@ header {
 }
 .mobileMenu {
   position: absolute;
+  z-index: 1000;
   top: 96px;
   left: 0;
   width: 100%;
@@ -36,8 +37,8 @@ header {
     position: absolute;
     display: block;
     background-color: $black;
-    opacity: 0.5;
-    height: 100%;
+    opacity: 0.75;
+    height: 100vh;
     width: 100%;
   }
 }

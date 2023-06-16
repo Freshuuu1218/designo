@@ -20,9 +20,11 @@ export class HeaderComponent {
   displayMenu() {
     this.display = !this.display;
     if (this.display) {
-      window.addEventListener('touchmove', this.preventDefault, false);
+      window.addEventListener('touchmove', this.preventDefault, {
+        passive: false,
+      });
     } else {
-      window.removeEventListener('touchmove', this.preventDefault, false);
+      window.removeEventListener('touchmove', this.preventDefault);
     }
   }
   hideMenu() {
